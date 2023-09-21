@@ -12,6 +12,7 @@ services:
     volumes:
       - ./apps:/opt/spark-apps
       - ./data:/data
+      # - ./jars:/spark/jars/
     networks:
       - spark-hadoop-cluster
 
@@ -47,7 +48,20 @@ services:
       - ./data:/data
     networks:
       - spark-hadoop-cluster
-
+  
+  jupyter-notebook:
+    image: spark-jupyter:3.1.2 
+    container_name: jupyter-notebook
+    hostname: jupyter-notebook
+    user: root
+    # depends_on:
+    #   - spark-master
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./jars:/jars
+    networks:
+      - spark-hadoop-cluster
 
 networks:
   spark-hadoop-cluster:
