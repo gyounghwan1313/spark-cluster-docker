@@ -1,4 +1,4 @@
-FROM spark-base:3.1.2
+FROM spark-base:3.3.0
 
 
 COPY master.sh /
