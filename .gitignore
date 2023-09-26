@@ -1,0 +1,8 @@
+jupyter_home
+data
+jars
+apps
+
+*/aws-java-sdk-bundle-1.12.170.jar
+*/pyspark-3.3.0.tar.gz
+*/spark-3.3.0-bin-hadoop3.tgz
