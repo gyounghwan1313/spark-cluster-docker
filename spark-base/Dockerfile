@@ -20,6 +20,7 @@ RUN pip3 install pyspark-3.3.0.tar.gz
 WORKDIR /opt/spark
 # RUN wget https://archive.apache.org/dist/spark/spark-3.3.0/spark-3.3.0-bin-hadoop3.tgz
 COPY spark-3.3.0-bin-hadoop3.tgz .
+RUN pip3 install pandas numpy requests elasticsearch==7.14.1 minio sqlalchemy psycopg clickhouse-connect pyhdfs lxml delta-saprk==2.3.0
 
 # ADD pyspark-3.3.0.tar.gz .
 # RUN pip3 install pyspark-3.3.0.tar.gz
