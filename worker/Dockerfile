@@ -1,4 +1,4 @@
-FROM spark-base:3.3.0-debian
+FROM spark-base:3.3.0
 
 WORKDIR /
 COPY worker.sh /
